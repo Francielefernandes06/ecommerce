@@ -1,7 +1,13 @@
 import React from 'react'
 import FormContainer from './FormContainer'
 import styled from 'styled-components'
+import imagemCafe from '../../images/imageCafe.avif'
 
+
+const DivContainer = styled.div`
+    display: flex;
+    
+`;
 const Label = styled.label`
   display: flex;
   flex-direction: column;
@@ -35,8 +41,17 @@ const Button = styled.button`
     margin-top: 3px;
 `;
 
+const Image = styled.img`
+    display: flex;
+    
+    height: 100vh;
+`;
+
 function Form() {
   return (
+    <DivContainer>
+       <Image src={imagemCafe}/>
+    
     <FormContainer>
       <h1>Fazer Login</h1>
       <InputArea className='mb-3'>
@@ -63,6 +78,9 @@ function Form() {
 
 
     </FormContainer>
+
+    </DivContainer>
+   
 
 
     
